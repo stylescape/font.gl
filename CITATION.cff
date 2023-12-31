@@ -1,10 +1,10 @@
 cff-version: 1.2.0
-title: stylescape
+title: font.gl
 version: 0.0.0
 date-released: 2023-01-01
-url: "https://github.com/scape-agency/stylescape"
+url: "https://github.com/scape-agency/font.gl"
 message: >-
-  If you use Stylescape, please cite it using
+  If you use font.gl, please cite it using
   the metadata from this file.
 type: software
 authors:

@@ -1,13 +1,13 @@
 # Project Information
-site_name: Stylescape
-site_url: https://www.scape.style/
-site_description: Identity Framework
+site_name: font.gl
+site_url: https://www.font.gl/
+site_description: Font Library
 site_author: Scape Agency
 lang: en
 
 # Repository
 repo_name: 'GitHub'
-repo_url: https://github.com/scape-agency/stylescape/
+repo_url: https://github.com/scape-agency/font.gl/
 edit_uri_template: 'docs/{path}'
 
 dev_addr: 127.0.0.1:8888

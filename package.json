@@ -84,12 +84,7 @@
         "webpack-merge": "^5.9.0"
     },
     "files": [
-        "dist/js/**/*.{js,map}",
-        "dist/css/**/*.{css,map}",
-        "dist/font/**/*.{eot,otf,ttf,woff,woff2}",
-        "src/ts/**/*.ts",
-        "src/scss/**/*.scss",
-        "src/font/**/*.{ttf,woff,woff2}"
+        "dist/font/**/*.{eot,otf,ttf,woff,woff2}"
     ],
     "hugo-bin": {
         "buildTags": "extended"
