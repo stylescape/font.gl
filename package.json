@@ -1,12 +1,14 @@
 {
-    "name": "stylescape",
-    "description": "Stylescape is a visual identity framework developed by Scape Agency.",
-    "version": "0.0.12",
+    "name": "font.gl",
+    "description": "font.gl is a font library and framework developed by Scape Agency.",
+    "version": "0.0.1",
     "config": {
         "version_short": "0.0"
     },
     "keywords": [
-        "stylescape",
+        "font",
+        "svg",
+        "font.gl",
         "sass",
         "responsive",
         "front-end",
@@ -14,7 +16,7 @@
         "framework",
         "web"
     ],
-    "homepage": "https://www.scape.style/",
+    "homepage": "https://www.font.gl/",
     "author": "Lars van Vianen",
     "contributors": [
         "Scape Agency"
@@ -22,10 +24,10 @@
     "license": "Apache-2.0",
     "repository": {
         "type": "git",
-        "url": "git+https://github.com/scape-agency/stylescape.git"
+        "url": "git+https://github.com/scape-agency/font.gl.git"
     },
     "bugs": {
-        "url": "https://github.com/scape-agency/stylescape/issues"
+        "url": "https://github.com/scape-agency/font.gl/issues"
     },
     "funding": [
         {
@@ -35,9 +37,9 @@
     ],
     "main": "src/scss/index.scss",
     "type": "module",
-    "module": "",
-    "sass": "",
-    "style": "",
+    "module": "dist/js/font.gl.js",
+    "style": "dist/css/font.gl.css",
+    "sass": "src/scss/index.scss",
     "scripts": {
         "format": "npx prettier --write .",
         "lint": "eslint 'src/**/*.ts' || true",
@@ -48,11 +50,12 @@
         "start": "webpack-dev-server --mode development --config webpack.config.js"
     },
     "devDependencies": {
-        "@babel/core": "^7.22.10",
-        "@babel/preset-env": "^7.22.10",
+        "@babel/core": "^7.23.6",
+        "@babel/preset-env": "^7.23.6",
+        "@babel/preset-typescript": "^7.23.3",
         "@types/webpack": "^5.28.1",
         "autoprefixer": "^10.4.15",
-        "babel-loader": "^9.1.2",
+        "babel-loader": "^9.1.3",
         "clean-webpack-plugin": "^4.0.0",
         "copy-webpack-plugin": "^11.0.0",
         "css-loader": "^6.8.1",
@@ -70,10 +73,12 @@
         "sass-loader": "^13.3.2",
         "sass-to-string": "^1.6.3",
         "style-loader": "^3.3.3",
-        "typescript": "^5.1.6",
+        "terser": "^5.26.0",
+        "terser-webpack-plugin": "^5.3.9",
         "ts-loader": "^9.4.3",
         "ts-node": "^10.9.1",
-        "webpack": "^5.88.2",
+        "typescript": "^5.1.6",
+        "webpack": "^5.89.0",
         "webpack-cli": "^5.1.4",
         "webpack-dev-server": "^4.15.1",
         "webpack-merge": "^5.9.0"
@@ -91,8 +96,10 @@
     },
     "jspm": {
         "registry": "npm",
-        "main": "",
-        "directories": {},
+        "main": "dist/js/font.gl.js",
+        "directories": {
+            "lib": "src"
+        },
         "shim": {},
         "dependencies": {},
         "peerDependencies": {}
