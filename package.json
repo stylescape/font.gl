@@ -1,6 +1,6 @@
 {
-    "name": "type.gl",
-    "description": "type.gl is a font library and framework developed by Scape Agency.",
+    "name": "font.gl",
+    "description": "font.gl is a font library and framework developed by Scape Agency.",
     "version": "0.0.1",
     "config": {
         "version_short": "0.0"
@@ -8,7 +8,7 @@
     "keywords": [
         "font",
         "svg",
-        "type.gl",
+        "font.gl",
         "sass",
         "responsive",
         "front-end",
@@ -16,7 +16,7 @@
         "framework",
         "web"
     ],
-    "homepage": "https://www.type.gl/",
+    "homepage": "https://www.font.gl/",
     "author": "Lars van Vianen",
     "contributors": [
         "Scape Agency"
@@ -24,10 +24,10 @@
     "license": "Apache-2.0",
     "repository": {
         "type": "git",
-        "url": "git+https://github.com/scape-agency/type.gl.git"
+        "url": "git+https://github.com/scape-agency/font.gl.git"
     },
     "bugs": {
-        "url": "https://github.com/scape-agency/type.gl/issues"
+        "url": "https://github.com/scape-agency/font.gl/issues"
     },
     "funding": [
         {
@@ -37,8 +37,8 @@
     ],
     "main": "src/scss/index.scss",
     "type": "module",
-    "module": "dist/js/type.gl.js",
-    "style": "dist/css/type.gl.css",
+    "module": "dist/js/font.gl.js",
+    "style": "dist/css/font.gl.css",
     "sass": "src/scss/index.scss",
     "scripts": {
         "format": "npx prettier --write .",
