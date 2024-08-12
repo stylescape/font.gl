@@ -5,6 +5,7 @@
 .cache
 .idea
 .vscode
+
 node_modules
 coverage
 dist
