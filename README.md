@@ -5,22 +5,11 @@
 
 </div>
 
----
-
-<div>
-    <img align="right" src="https://raw.githubusercontent.com/stylescape/brand/master/src/logo/font.gl.png" width="96" alt="Scape Agency Logo">
-    <h1 align="left">font.gl</h1>
-    <h3 align="left">Variable Font Library</h3>
-</div>
-
----
-
-<img align="right" width="75%" src="https://raw.githubusercontent.com/stylescape/brand/master/src/image/repository_cover/block_foundation-structure-03-accent.jpg"  alt="Scape Agency Brand">
-
-### Contents
-
-- [Introduction](#introduction)
-- [Colophon](#colophon)
+<p align="center">
+    <img src="https://raw.githubusercontent.com/stylescape/brand/master/src/logo/logo-transparant.png" width="20%" height="20%" alt="Stylescape Logo">
+</p>
+<h1 align="center" style='border-bottom: none;'>font.gl</h1>
+<h3 align="center">Variable Font Collection</h3>
 
 <br clear="both"/>
 
