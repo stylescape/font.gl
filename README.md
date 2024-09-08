@@ -51,8 +51,6 @@
 
 5. **Multilingual Support**: Many fonts in font.gl offer extensive character sets and glyphs to support multiple languages and global projects.
 
-6. **Community Contributions**: font.gl is not just a library; it's a community. Designers and typographers from around the world are encouraged to submit their fonts, ensuring the collection remains fresh, dynamic, and ever-growing.
-
 ``` mermaid
 pie
     title Classification of Fonts
