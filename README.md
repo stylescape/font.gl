@@ -53,6 +53,16 @@
 
 6. **Community Contributions**: font.gl is not just a library; it's a community. Designers and typographers from around the world are encouraged to submit their fonts, ensuring the collection remains fresh, dynamic, and ever-growing.
 
+``` mermaid
+pie
+    title Classification of Fonts
+    "Serif" : 30
+    "Sans-Serif" : 30
+    "Display" : 20
+    "Monospace" : 10
+    "Script" : 10
+```
+
 ## Installation
 
 ### HTML Script Tag
