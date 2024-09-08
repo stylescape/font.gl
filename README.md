@@ -4,7 +4,6 @@
 <h1 align="center" style='border-bottom: none;'>font.gl</h1>
 <h3 align="center">Variable Font Collection</h3>
 
-
 <br/>
 
 <div align="center">
@@ -31,7 +30,6 @@
 ---
 
 <br/>
-
 
 **Curated Open-Source Variable Font Library by Scape Agency**
 
@@ -75,11 +73,6 @@ pie
 npm i font.gl
 ```
 
-## Links
-
-- [Website](https://www.font.gl)
-- [NPM](https://www.npmjs.com/package/font.gl)
-
 ---
 
 ## Colophon
@@ -88,7 +81,7 @@ npm i font.gl
 
 **font.gl** is an open-source project by **[Scape Agency](https://www.scape.agency "Scape Agency website")**.
 
-##### Scape Agency
+#### Scape Agency
 
 Scape Agency is a spatial innovation collective that dreams, discovers and designs the everyday of tomorrow. We blend design thinking with emerging technologies to create a brighter perspective for people and planet. Our products and services naturalise technology in liveable and sustainable –scapes that spark the imagination and inspire future generations.
 
@@ -119,3 +112,9 @@ Also see [LICENSE](https://github.com/stylescape/community/blob/master/src/LICEN
 #### Disclaimer
 
 **THIS SOFTWARE IS PROVIDED AS IS WITHOUT WARRANTY OF ANY KIND, EITHER EXPRESS OR IMPLIED, INCLUDING ANY IMPLIED WARRANTIES OF FITNESS FOR A PARTICULAR PURPOSE, MERCHANTABILITY, OR NON-INFRINGEMENT.**
+
+---
+
+<p align="center">
+    <b>Made with ❤️ by <a href="https://www.scape.agency" target="_blank">Scape Agency</a></b>
+</p>
