@@ -43,7 +43,7 @@
 
 2. **Diverse Styles**: From serif and sans-serif to hand-lettered and decorative fonts, font.gl hosts a wide range of styles to fit diverse design requirements.
 
-3. **Open-Source Licensing**: Each font in the library is open-source, which means you can use it for both personal and commercial projects without any restrictions.
+3. **Open-Source Licensing**: Each font in the library is open-source under the [SIL Open Font License](https://openfontlicense.org/), which means you can use it for both personal and commercial projects without any restrictions. `font.gl` itself is lecensed under the MIT License.
 
 4. **Web-Ready**: All the fonts are optimized for web use, ensuring fast loading times and consistent rendering across different devices and browsers.
 
