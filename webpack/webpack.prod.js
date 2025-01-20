@@ -1,17 +1,14 @@
-// webpack.prod.js
-
-
 // ============================================================================
 // Imports
 // ============================================================================
 
-import path from "path"
-import { fileURLToPath } from "url";
-import MiniCssExtractPlugin from "mini-css-extract-plugin";
-import CopyWebpackPlugin from "copy-webpack-plugin";
-import TerserPlugin from "terser-webpack-plugin";
 import { CleanWebpackPlugin } from "clean-webpack-plugin";
+import CopyWebpackPlugin from "copy-webpack-plugin";
 import CssMinimizerPlugin from "css-minimizer-webpack-plugin";
+import MiniCssExtractPlugin from "mini-css-extract-plugin";
+import path from "path";
+import TerserPlugin from "terser-webpack-plugin";
+import { fileURLToPath } from "url";
 
 
 // ============================================================================
@@ -25,7 +22,7 @@ const __dirname = path.dirname(__filename);
 
 /**
  * Production Webpack Configuration
- * 
+ *
  */
 export const configProduction = {
 
