@@ -1,7 +1,5 @@
-// tsconfig.json
-
 {
-    
+
   "$schema": "https://json.schemastore.org/tsconfig",
   "display": "ESM",
 
@@ -135,5 +133,5 @@
       "public",
       "build"
   ]
- 
+
 }
