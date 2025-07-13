@@ -50,7 +50,7 @@
         "start": "webpack-dev-server --mode development --config webpack.config.js"
     },
     "devDependencies": {
-        "@babel/core": "^7.27.7",
+        "@babel/core": "^7.28.0",
         "@babel/preset-env": "^7.28.0",
         "@babel/preset-typescript": "^7.27.1",
         "@types/webpack": "^5.28.1",
