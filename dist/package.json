@@ -1,0 +1,40 @@
+{
+  "name": "font.gl",
+  "version": "0.0.12",
+  "description": "font.gl is a font library and framework developed by Scape Agency.",
+  "keywords": [
+    "font",
+    "svg",
+    "font.gl",
+    "sass",
+    "responsive",
+    "front-end",
+    "layout-engine",
+    "framework",
+    "web"
+  ],
+  "license": "MIT",
+  "homepage": "https://www.font.gl/",
+  "main": "src/scss/index.scss",
+  "types": "js/index.d.ts",
+  "files": [
+    "dist/font/**/*.{eot,otf,ttf,woff,woff2}"
+  ],
+  "author": "Lars van Vianen",
+  "contributors": [
+    "Scape Agency"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/stylescape/font.gl.git"
+  },
+  "funding": [
+    {
+      "type": "github",
+      "url": "https://github.com/sponsors/scape-foundation"
+    }
+  ],
+  "module": "dist/js/font.gl.js",
+  "style": "dist/css/font.gl.css",
+  "sass": "src/scss/index.scss"
+}
