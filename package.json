@@ -55,7 +55,7 @@
         "@babel/preset-env": "^7.29.0",
         "@babel/preset-typescript": "^7.28.5",
         "@getkist/action-nunjucks": "^2.0.14",
-        "@getkist/action-sass": "^1.0.4",
+        "@getkist/action-sass": "^1.0.9",
         "@types/webpack": "^5.28.1",
         "autoprefixer": "^10.4.24",
         "babel-loader": "^10.0.0",
