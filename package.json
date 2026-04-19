@@ -57,7 +57,7 @@
         "@getkist/action-nunjucks": "^2.0.14",
         "@getkist/action-sass": "^1.0.9",
         "@types/webpack": "^5.28.1",
-        "autoprefixer": "^10.4.27",
+        "autoprefixer": "^10.5.0",
         "babel-loader": "^10.1.1",
         "clean-webpack-plugin": "^4.0.0",
         "copy-webpack-plugin": "^13.0.1",
