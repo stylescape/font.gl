@@ -1,7 +1,7 @@
 {
   "name": "font.gl",
   "version": "0.0.13",
-  "description": "font.gl is a font library and framework developed by Scape Agency.",
+  "description": "font.gl is a font library and framework developed by Scape Press.",
   "keywords": [
     "font",
     "svg",
@@ -22,7 +22,7 @@
   ],
   "author": "Lars van Vianen",
   "contributors": [
-    "Scape Agency"
+    "Scape Press"
   ],
   "repository": {
     "type": "git",

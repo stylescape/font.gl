@@ -31,11 +31,11 @@
 
 <br/>
 
-**Curated Open-Source Variable Font Library by Scape Agency**
+**Curated Open-Source Variable Font Library by Scape Press**
 
 ## Overview
 
-**font.gl** (Shodō) is a meticulously curated, open-source font library initiated by the design enthusiasts at Scape Agency. With a vision to empower designers, developers, and content creators, font.gl offers an array of diverse and high-quality typefaces that cater to various design needs — be it for branding, web design, print, or other creative projects.
+**font.gl** (Shodō) is a meticulously curated, open-source font library initiated by the design enthusiasts at Scape Press. With a vision to empower designers, developers, and content creators, font.gl offers an array of diverse and high-quality typefaces that cater to various design needs — be it for branding, web design, print, or other creative projects.
 
 ## Features
 
@@ -79,14 +79,14 @@ npm i font.gl
 
 ### Authors
 
-**font.gl** is an open-source project by **[Scape Agency](https://www.scape.agency "Scape Agency website")**.
+**font.gl** is an open-source project by **[Scape Press](https://www.scape.press "Scape Press website")**.
 
-#### Scape Agency
+#### Scape Press
 
-Scape Agency is a spatial innovation collective that dreams, discovers and designs the everyday of tomorrow. We blend design thinking with emerging technologies to create a brighter perspective for people and planet. Our products and services naturalise technology in liveable and sustainable –scapes that spark the imagination and inspire future generations.
+Scape Press is a spatial innovation collective that dreams, discovers and designs the everyday of tomorrow. We blend design thinking with emerging technologies to create a brighter perspective for people and planet. Our products and services naturalise technology in liveable and sustainable –scapes that spark the imagination and inspire future generations.
 
-- website: [scape.agency](https://www.scape.agency "Scape Agency website")
-- github: [github.com/stylescape](https://github.com/stylescape "Scape Agency GitHub")
+- website: [scape.press](https://www.scape.press "Scape Press website")
+- github: [github.com/stylescape](https://github.com/stylescape "Scape Press GitHub")
 
 ### Development Resources
 
@@ -99,7 +99,7 @@ Please refer to the [contribution guidelines](.github/CONTRIBUTING.md) for infor
 
 #### Copyright
 
-Copyright &copy; 2025 [Scape Agency BV](https://www.scape.agency/ "Scape Agency website"). All Rights Reserved.
+Copyright &copy; 2025 [Scape Press BV](https://www.scape.press/ "Scape Press website"). All Rights Reserved.
 
 #### License
 
@@ -116,5 +116,5 @@ Also see [LICENSE](https://github.com/stylescape/community/blob/master/src/LICEN
 ---
 
 <p align="center">
-    <b>Made with ❤️ by <a href="https://www.scape.agency" target="_blank">Scape Agency</a></b>
+    <b>Made with ❤️ by <a href="https://www.scape.press" target="_blank">Scape Press</a></b>
 </p>
