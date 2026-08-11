@@ -51,7 +51,7 @@
         "start": "webpack-dev-server --mode development --config webpack.config.js"
     },
     "devDependencies": {
-        "@babel/core": "^7.29.0",
+        "@babel/core": "^7.29.7",
         "@babel/preset-env": "^7.29.7",
         "@babel/preset-typescript": "^7.28.5",
         "@getkist/action-nunjucks": "^2.0.28",
