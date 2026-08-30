@@ -69,7 +69,7 @@
         "kist": "^0.1.75",
         "mini-css-extract-plugin": "^2.10.2",
         "postcss-loader": "^8.2.1",
-        "postcss-preset-env": "^11.4.0",
+        "postcss-preset-env": "^11.5.0",
         "prettier": "^3.9.6",
         "sass": "^1.103.0",
         "sass-loader": "^16.0.7",
