@@ -1,5 +1,4 @@
-__Last revised on January 1, 2023__
-
+**Last revised on January 1, 2023**
 
 Scape Press BV will collect certain non-personally identify information
 about you as you use our sites. We may use this data to better understand our
@@ -16,6 +15,7 @@ That's the basic idea, but you must read through the entire Privacy Policy
 below and agree with all the details before you use any of our sites.
 
 ## Reuse
+
 This document is based upon the Automattic Privacy Policy and is licensed under
 Creative Commons Attribution Share-Alike License 2.5. Basically, this means you
 can use it verbatim or edited, but you must release new versions under the same
@@ -32,10 +32,12 @@ policy to respect your privacy regarding any information we may collect while
 operating our websites.
 
 ## Questions
+
 If you have question about this Privacy Policy, please contact us at:
 [info@scape.press](mailto:info@scape.press)
 
 ## Visitors
+
 Like most website operators, Scape Press BV collects
 non-personally-identifying information of the sort that web browsers and
 servers typically make available, such as the browser type, language
@@ -55,6 +57,7 @@ also collect and use IP addresses to block users who violated our Terms of
 Service.
 
 ## Gathering of Personally-Identifying Information
+
 Certain visitors to Scape Press BV's websites choose to interact with
 Scape Press BV in ways that require Scape Press BV to gather
 personally-identifying information. The amount and type of information that
@@ -73,6 +76,7 @@ comment is displayed. Supplying such personal information is completely
 optional and is only displayed for the benefit and the convenience of the user.
 
 ## Aggregated Statistics
+
 Scape Press BV may collect statistics about the behavior of visitors to
 the Service. For instance, Scape Press BV may monitor the most popular
 parts of the URL of its sites and services. Scape Press BV may display
@@ -81,6 +85,7 @@ Scape Press BV does not disclose personally-identifying information
 other than as described below.
 
 ## Protection of Certain Personally-Identifying Information
+
 Scape Press BV discloses potentially personally-identifying and
 personally-identifying information only to those of its employees, contractors
 and affiliated organizations that (i) need to know that information in order to
@@ -109,6 +114,7 @@ protect against the unauthorized access, use, alteration or destruction of
 potentially personally-identifying and personally-identifying information.
 
 ## Cookies
+
 A cookie is a string of information that a website stores on a visitor's
 computer, and that the visitor's browser provides to the Service each time the
 visitor returns. Scape Press BV uses cookies to help
@@ -121,6 +127,7 @@ Scape Press BV's websites may not function properly without the aid of
 cookies.
 
 ## Data Storage
+
 Scape Press BV uses third party vendors and hosting partners to provide
 the necessary hardware, software, networking, storage, and related technology
 required to run the Service. You understand that although you retain full
@@ -128,6 +135,7 @@ rights to your data, it may be stored on third party storage and transmitted
 through third party networks.
 
 ## Privacy Policy Changes
+
 Although most changes are likely to be minor, Scape Press BV may change
 its Privacy Policy from time to time, and in Scape Press BV's sole
 discretion. Scape Press BV encourages visitors to frequently check this
