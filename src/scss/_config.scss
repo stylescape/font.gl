@@ -1,0 +1,32 @@
+// ============================================================================
+// font.gl | Configuration
+// ============================================================================
+// Every setting is `!default`, so it can be overridden on import:
+//
+//   @use "font.gl" with ($font-path: "/assets/fonts");
+// ============================================================================
+
+/// Base URL of the font directory, relative to the compiled CSS file.
+/// The default matches the published package (`css/` next to `font/`).
+/// @type String
+$font-path: "../font" !default;
+
+/// `font-display` strategy for every generated `@font-face` rule.
+/// @type String
+$font-display: swap !default;
+
+/// File formats to reference in `src`, in order of preference.
+/// Each entry maps a file extension to its CSS `format()` hint.
+/// @type Map
+$font-formats: (
+    "woff2": "woff2",
+    "ttf": "truetype",
+) !default;
+
+/// Emit `--font-*` custom properties on `:root`.
+/// @type Bool
+$font-emit-properties: true !default;
+
+/// Emit `.font-*` utility classes.
+/// @type Bool
+$font-emit-utilities: true !default;

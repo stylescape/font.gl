@@ -7,6 +7,8 @@
 </header>
 <br/>
 
-**font.gl** is a font framework.
+**font.gl** is a curated collection of open-source variable fonts, packaged for the web: WOFF2 + TTF files, a ready-to-use stylesheet, and a Sass API to generate exactly the `@font-face` rules you need.
+
+Start with the [Quick Start](quick_start.md), or see the [Specifications](specifications/index.md) for the bundled fonts and the full Sass API.
 
 **font.gl** is an open-source project by [Scape Press](https://www.scape.press "Scape Press website").

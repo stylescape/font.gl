@@ -1,0 +1,82 @@
+// ============================================================================
+// font.gl | Font Face
+// ============================================================================
+
+@use "sass:list";
+@use "sass:map";
+@use "../config";
+@use "../maps";
+
+/// Returns a registered font or fails with a readable error.
+/// @param {String} $key - Registry key, e.g. `"manrope"`
+/// @return {Map}
+@function font($key) {
+    @if not map.has-key(maps.$fonts, $key) {
+        @error "font.gl: unknown font `#{$key}`. Available: #{map.keys(maps.$fonts)}.";
+    }
+    @return map.get(maps.$fonts, $key);
+}
+
+/// Returns the full `font-family` stack of a registered font.
+/// @param {String} $key - Registry key
+/// @return {List}
+@function font-stack($key) {
+    $font: font($key);
+    @return list.join((map.get($font, family),), map.get($font, fallback), comma);
+}
+
+/// Emits the `@font-face` rule for a registered font.
+/// @param {String} $key - Registry key
+/// @param {String} $path [config.$font-path] - Base URL of the font directory
+/// @example scss
+///   @include font-face("manrope", "/fonts");
+@mixin font-face($key, $path: config.$font-path) {
+    $font: font($key);
+    $file: "#{$path}/#{$key}/#{map.get($font, file)}";
+    $src: ();
+
+    @each $ext, $format in config.$font-formats {
+        $src: list.append($src, url("#{$file}.#{$ext}") format($format), comma);
+    }
+
+    @font-face {
+        font-family: map.get($font, family);
+        src: $src;
+        font-weight: map.get($font, weight);
+        font-style: normal;
+        font-display: config.$font-display;
+    }
+}
+
+/// Emits `@font-face` rules for every registered font.
+/// @param {String} $path [config.$font-path] - Base URL of the font directory
+@mixin font-faces($path: config.$font-path) {
+    @each $key in map.keys(maps.$fonts) {
+        @include font-face($key, $path);
+    }
+}
+
+/// Applies a registered font, including its custom-axis settings.
+/// Axes are exposed as `--font-<key>-<axis>` so they can be tuned in place.
+/// @param {String} $key - Registry key
+/// @example scss
+///   .title { @include font("alvarado"); --font-alvarado-wght: 100; }
+@mixin font($key) {
+    $font: font($key);
+
+    font-family: font-stack($key);
+
+    $axes: map.get($font, axes);
+    @if $axes {
+        $settings: ();
+        @each $axis, $default in $axes {
+            $settings: list.append(
+                $settings,
+                "#{$axis}" var(--font-#{$key}-#{$axis}, $default),
+                comma
+            );
+        }
+
+        font-variation-settings: $settings;
+    }
+}

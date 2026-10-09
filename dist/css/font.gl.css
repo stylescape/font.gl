@@ -1,0 +1,54 @@
+@charset "UTF-8";
+/**
+* font.gl
+*
+* @description     Variable font collection
+* @author          Scape Press (https://www.scape.press)
+* @website         https://www.font.gl/
+* @repository      https://github.com/stylescape/font.gl/
+* @license         MIT (code) · fonts carry their own licenses
+*/
+@font-face {
+  font-family: "Manrope";
+  src: url("../font/manrope/manrope-variable.woff2") format("woff2"), url("../font/manrope/manrope-variable.ttf") format("truetype");
+  font-weight: 200 800;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Quicksand";
+  src: url("../font/quicksand/quicksand-variable.woff2") format("woff2"), url("../font/quicksand/quicksand-variable.ttf") format("truetype");
+  font-weight: 300 700;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Alvarado";
+  src: url("../font/alvarado/alvarado-variable.woff2") format("woff2"), url("../font/alvarado/alvarado-variable.ttf") format("truetype");
+  font-weight: 1 100;
+  font-style: normal;
+  font-display: swap;
+}
+:root {
+  --font-manrope: "Manrope", ui-sans-serif, system-ui, sans-serif;
+  --font-quicksand: "Quicksand", ui-rounded, ui-sans-serif, system-ui, sans-serif;
+  --font-alvarado: "Alvarado", ui-serif, "Georgia", serif;
+}
+
+.font-manrope {
+  font-family: "Manrope", ui-sans-serif, system-ui, sans-serif;
+}
+
+.font-quicksand {
+  font-family: "Quicksand", ui-rounded, ui-sans-serif, system-ui, sans-serif;
+}
+
+.font-alvarado {
+  font-family: "Alvarado", ui-serif, "Georgia", serif;
+  font-variation-settings: "wght" var(--font-alvarado-wght, 25), "ital" var(--font-alvarado-ital, 0);
+}
+
+.font-smooth {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}

@@ -1,0 +1,26 @@
+// ============================================================================
+// font.gl | Font Smoothing
+// ============================================================================
+
+@use "sass:list";
+@use "sass:string";
+
+/// Applies platform font smoothing (macOS only; ignored elsewhere).
+/// Firefox has no `antialiased` keyword, so it maps to `grayscale`.
+/// @param {String} $type ["antialiased"] - `antialiased`, `subpixel-antialiased` or `auto`
+/// @example scss
+///   @include font-smoothing;
+@mixin font-smoothing($type: antialiased) {
+    $type: string.unquote("#{$type}");
+
+    @if not list.index((antialiased, subpixel-antialiased, auto, none), $type) {
+        @error "font-smoothing: unknown type `#{$type}`.";
+    }
+
+    -webkit-font-smoothing: $type;
+    @if $type == antialiased {
+        -moz-osx-font-smoothing: grayscale;
+    } @else {
+        -moz-osx-font-smoothing: auto;
+    }
+}

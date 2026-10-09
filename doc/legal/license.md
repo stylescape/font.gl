@@ -1,11 +1,13 @@
 # License
 
-Except where otherwise noted, **rite** is licensed under the terms of the [MIT License](https://opensource.org/licenses/MIT "MIT License").
+Except where otherwise noted, the **font.gl** code (Sass, build configuration, demo) is licensed under the terms of the [MIT License](https://opensource.org/licenses/MIT "MIT License").
+
+The bundled font files are **not** covered by this license; each font keeps its own license. Manrope, Quicksand and Alvarado are licensed under the [SIL Open Font License 1.1](https://openfontlicense.org/); the full license text ships as `OFL.txt` next to each font. See [Specifications](../specifications/index.md#fonts).
 
 
 ## MIT License
 
-**Copyright (c) 2023 Starling Associates BV**
+**Copyright (c) 2024 Scape Press**
 
 Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
 copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:

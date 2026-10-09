@@ -8,8 +8,7 @@ public/
 dist/
 
 # Build configuration files - Exclude build config files
-webpack.config.js
-webpack.config.ts
+kist.yml
 
 # OS-specific files - Exclude system-specific files
 .DS_Store           # macOS Finder metadata

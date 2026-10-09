@@ -35,43 +35,82 @@
 
 ## Overview
 
-**font.gl** (Shodō) is a meticulously curated, open-source font library initiated by the design enthusiasts at Scape Press. With a vision to empower designers, developers, and content creators, font.gl offers an array of diverse and high-quality typefaces that cater to various design needs — be it for branding, web design, print, or other creative projects.
+**font.gl** is a curated collection of open-source variable fonts by Scape Press, packaged for the web: WOFF2 + TTF files, a ready-to-use stylesheet, and a Sass API to generate exactly the `@font-face` rules you need.
 
-## Features
+## Fonts
 
-1. **Curated Collection**: Every font in font.gl has undergone a rigorous selection process to ensure quality, readability, and aesthetic appeal.
-
-2. **Diverse Styles**: From serif and sans-serif to hand-lettered and decorative fonts, font.gl hosts a wide range of styles to fit diverse design requirements.
-
-3. **Open-Source Licensing**: Each font in the library is open-source under the [SIL Open Font License](https://openfontlicense.org/), which means you can use it for both personal and commercial projects without any restrictions. `font.gl` itself is lecensed under the MIT License.
-
-4. **Web-Ready**: All the fonts are optimized for web use, ensuring fast loading times and consistent rendering across different devices and browsers.
-
-5. **Multilingual Support**: Many fonts in font.gl offer extensive character sets and glyphs to support multiple languages and global projects.
-
-``` mermaid
-pie
-    title Classification of Fonts
-    "Serif" : 30
-    "Sans-Serif" : 30
-    "Display" : 20
-    "Monospace" : 10
-    "Script" : 10
-```
+| Key         | Family    | Classification | Weight axis               | Designer          | License                                              |
+| ----------- | --------- | -------------- | ------------------------- | ----------------- | ---------------------------------------------------- |
+| `manrope`   | Manrope   | Sans-serif     | `wght` 200–800            | Mikhail Sharanda  | [SIL OFL 1.1](src/font/manrope/OFL.txt)              |
+| `quicksand` | Quicksand | Rounded sans   | `wght` 300–700            | Andrew Paglinawan | [SIL OFL 1.1](src/font/quicksand/OFL.txt)            |
+| `alvarado`  | Alvarado  | Serif          | `wght` 0–100, `ital` 0–100 | Hector Torres     | [SIL OFL 1.1](src/font/alvarado/OFL.txt)             |
 
 ## Installation
-
-### HTML Script Tag
-
-``` html
-<script src="https://unpkg.com/font.gl@latest/dist.min.js"></script>
-```
-
-### NPM Module
 
 ``` bash
 npm i font.gl
 ```
+
+## Usage
+
+### CSS
+
+Link the compiled stylesheet. It declares every font, exposes `--font-<key>` custom properties and `.font-<key>` utility classes, and expects the `font/` directory next to `css/` (as shipped):
+
+``` html
+<link rel="stylesheet" href="node_modules/font.gl/css/font.gl.css">
+
+<h1 class="font-manrope">Hello</h1>
+<p style="font-family: var(--font-quicksand)">World</p>
+```
+
+### Sass
+
+Configure the stylesheet on import — for example when you serve the font files from your own path:
+
+``` scss
+@use "pkg:font.gl" with (
+    $font-path: "/assets/fonts",        // default: "../font"
+    $font-display: swap,
+    $font-formats: ("woff2": "woff2"),  // drop the TTF fallback
+    $font-emit-utilities: false,
+);
+```
+
+Or use only the functions and mixins, which emit no CSS on their own:
+
+``` scss
+@use "pkg:font.gl/scss/font" as font;
+
+@include font.font-face("manrope");
+
+body {
+    @include font.font("manrope");      // font-family stack
+    @include font.font-smoothing;       // antialiased / grayscale
+    font-weight: 600;
+}
+```
+
+`pkg:` URLs need Dart Sass with the Node package importer (`--pkg-importer=node`, or `importers: [new NodePackageImporter()]`).
+
+### Alvarado
+
+Alvarado's axes don't follow the CSS scales (`wght` runs 0–100: Light 0, Regular 25, Medium 50, Bold 100), so `font-weight` and `font-style` can't reach them. `.font-alvarado` and `@include font.font("alvarado")` drive the axes through custom properties instead:
+
+``` css
+.title {
+    --font-alvarado-wght: 100;  /* Bold */
+    --font-alvarado-ital: 100;  /* Italic */
+}
+```
+
+## Development
+
+``` bash
+npm run build      # kist: CSS, Sass, fonts and dist/package.json into dist/
+```
+
+`dist/` is the published package root. Open `dist/html/index.html` after a build for an interactive font tester.
 
 ---
 
@@ -103,11 +142,13 @@ Copyright &copy; 2025 [Scape Press BV](https://www.scape.press/ "Scape Press web
 
 #### License
 
-Except as otherwise noted, the content in this repository is licensed under the
-[Creative Commons Attribution 4.0 International (CC BY 4.0) License](https://creativecommons.org/licenses/by/4.0/), and
-code samples are licensed under the [Apache 2.0 License](http://www.apache.org/licenses/LICENSE-2.0).
+The font.gl code (Sass, build configuration, demo) is licensed under the [MIT License](LICENSE).
 
-Also see [LICENSE](https://github.com/stylescape/community/blob/master/src/LICENSE) and [LICENSE-CODE](https://github.com/stylescape/community/blob/master/src/LICENSE-CODE).
+The bundled fonts are **not** covered by the MIT License; each keeps its own license, shipped next to the font files:
+
+- Manrope — [SIL Open Font License 1.1](src/font/manrope/OFL.txt)
+- Quicksand — [SIL Open Font License 1.1](src/font/quicksand/OFL.txt), with Reserved Font Name "Quicksand"
+- Alvarado — [SIL Open Font License 1.1](src/font/alvarado/OFL.txt), published by [Primary Foundry](https://primary-foundry.com/typefaces/alvarado/)
 
 #### Disclaimer
 
@@ -116,5 +157,5 @@ Also see [LICENSE](https://github.com/stylescape/community/blob/master/src/LICEN
 ---
 
 <p align="center">
-    <b>Made with ❤️ by <a href="https://www.scape.press" target="_blank">Scape Press</a></b>
+    <b>Made by <a href="https://www.scape.press" target="_blank">Scape Press</a></b>
 </p>

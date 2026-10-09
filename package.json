@@ -1,20 +1,21 @@
 {
     "name": "font.gl",
-    "description": "font.gl is a font library and framework developed by Scape Press.",
+    "description": "font.gl is a curated collection of open-source variable fonts with a Sass/CSS integration, by Scape Press.",
     "version": "0.0.13",
     "config": {
         "version_short": "0.0"
     },
     "keywords": [
         "font",
-        "svg",
+        "fonts",
+        "variable-fonts",
+        "webfont",
+        "woff2",
+        "font-face",
         "font.gl",
         "sass",
-        "responsive",
-        "front-end",
-        "layout-engine",
-        "framework",
-        "web"
+        "scss",
+        "css"
     ],
     "homepage": "https://www.font.gl/",
     "author": "Lars van Vianen",
@@ -35,69 +36,38 @@
             "url": "https://github.com/sponsors/scape-foundation"
         }
     ],
-    "main": "src/scss/index.scss",
     "type": "module",
-    "module": "dist/js/font.gl.js",
+    "main": "src/scss/index.scss",
     "style": "dist/css/font.gl.css",
     "sass": "src/scss/index.scss",
+    "files": [
+        "dist/css/**",
+        "dist/scss/**",
+        "dist/font/**"
+    ],
     "scripts": {
-        "format": "npx prettier --write .",
-        "lint": "eslint 'src/**/*.ts' || true",
-        "prettify": "prettier --write 'src/**/*.ts'",
-        "dev": "webpack --mode development --config webpack.config.js",
         "build": "npx kist --config ./kist.yml",
-        "build:webpack": "webpack --mode production --config webpack.config.js",
-        "serve": "webpack serve --mode development --config webpack.config.js",
-        "start": "webpack-dev-server --mode development --config webpack.config.js"
+        "build:css": "sass --no-source-map src/scss/index.scss dist/css/font.gl.css",
+        "format": "npx prettier --write .",
+        "lint": "npm run lint:ts && npm run lint:scss",
+        "lint:ts": "eslint src/ts",
+        "lint:scss": "stylelint \"src/scss/**/*.scss\"",
+        "lint:scss:fix": "stylelint \"src/scss/**/*.scss\" --fix",
+        "typecheck": "tsc --noEmit"
     },
     "devDependencies": {
-        "@babel/core": "^7.29.7",
-        "@babel/preset-env": "^7.29.7",
-        "@babel/preset-typescript": "^7.28.5",
-        "@getkist/action-nunjucks": "^2.0.28",
+        "@eslint/js": "^10.0.1",
         "@getkist/action-sass": "^1.0.23",
-        "@types/webpack": "^5.28.1",
         "autoprefixer": "^10.6.1",
-        "babel-loader": "^10.1.1",
-        "clean-webpack-plugin": "^4.0.0",
-        "copy-webpack-plugin": "^14.0.0",
-        "css-loader": "^7.1.4",
-        "css-minimizer-webpack-plugin": "^8.0.0",
         "eslint": "^10.4.1",
         "eslint-config-prettier": "^10.1.8",
-        "html-webpack-plugin": "^5.6.7",
         "kist": "^0.1.75",
-        "mini-css-extract-plugin": "^2.10.2",
-        "postcss-loader": "^8.2.1",
-        "postcss-preset-env": "^11.5.3",
         "prettier": "^3.9.7",
         "sass": "^1.104.0",
-        "sass-loader": "^16.0.7",
-        "style-loader": "^4.0.0",
-        "terser": "^5.46.1",
-        "terser-webpack-plugin": "^5.6.1",
-        "ts-loader": "^9.6.2",
-        "ts-node": "^10.9.1",
+        "stylelint": "^17.11.1",
+        "stylelint-config-standard-scss": "^17.0.0",
+        "stylescape": "^0.4.1",
         "typescript": "^6.0.3",
-        "webpack": "^5.111.1",
-        "webpack-cli": "^7.2.2",
-        "webpack-dev-server": "^5.2.3",
-        "webpack-merge": "^6.0.1"
-    },
-    "files": [
-        "dist/font/**/*.{eot,otf,ttf,woff,woff2}"
-    ],
-    "hugo-bin": {
-        "buildTags": "extended"
-    },
-    "jspm": {
-        "registry": "npm",
-        "main": "dist/js/type.gl.js",
-        "directories": {
-            "lib": "src"
-        },
-        "shim": {},
-        "dependencies": {},
-        "peerDependencies": {}
+        "typescript-eslint": "^8.71.1"
     }
 }

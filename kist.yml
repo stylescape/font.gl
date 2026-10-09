@@ -27,58 +27,22 @@ stages:
                   dirPath: "./dist"
 
             # Process SCSS to CSS (compressed)
-            # Note: Main index.scss has external imports - use font.scss for standalone
             # -----------------------------------------------------------------
-            # - name: ProcessMainStylesMinified
-            #   action: StyleProcessingAction
-            #   options:
-            #       inputFile: "./src/scss/index.scss"
-            #       outputFile: "./dist/css/font.gl.min.css"
-            #       styleOption: "compressed"
+            - name: ProcessMainStylesMinified
+              action: StyleProcessingAction
+              options:
+                  inputFile: "./src/scss/index.scss"
+                  outputFile: "./dist/css/font.gl.min.css"
+                  styleOption: "compressed"
 
             # Process SCSS to CSS (expanded)
             # -----------------------------------------------------------------
-            # - name: ProcessMainStylesExpanded
-            #   action: StyleProcessingAction
-            #   options:
-            #       inputFile: "./src/scss/index.scss"
-            #       outputFile: "./dist/css/font.gl.css"
-            #       styleOption: "expanded"
-
-            # Compile TypeScript to JavaScript
-            # Note: TS compilation disabled due to tsconfig moduleResolution conflict
-            # -----------------------------------------------------------------
-            # - name: CompileTypeScript
-            #   action: TypeScriptCompilerAction
-            #   options:
-            #       tsConfigPath: "./tsconfig.json"
-            #       filePaths:
-            #           - "src/ts/index.ts"
-            #       outputDir: "./dist/js"
-            #       compilerOptions:
-            #           target: "ES2020"
-            #           module: "ES2020"
-            #           declaration: true
-
-            # Rename JS files
-            # -----------------------------------------------------------------
-            # - name: RenameMainJS
-            #   action: FileRenameAction
-            #   options:
-            #       srcPath: "./dist/js/index.js"
-            #       targetPath: "./dist/js/font.gl.js"
-
-            # - name: RenameMainJSMap
-            #   action: FileRenameAction
-            #   options:
-            #       srcPath: "./dist/js/index.js.map"
-            #       targetPath: "./dist/js/font.gl.js.map"
-
-            # - name: RenameMainDTS
-            #   action: FileRenameAction
-            #   options:
-            #       srcPath: "./dist/js/index.d.ts"
-            #       targetPath: "./dist/js/font.gl.d.ts"
+            - name: ProcessMainStylesExpanded
+              action: StyleProcessingAction
+              options:
+                  inputFile: "./src/scss/index.scss"
+                  outputFile: "./dist/css/font.gl.css"
+                  styleOption: "expanded"
 
             # Copy source files
             # -----------------------------------------------------------------
@@ -87,12 +51,6 @@ stages:
               options:
                   srcDir: "./src/scss"
                   destDir: "./dist/scss"
-
-            - name: CopySrcTS
-              action: DirectoryCopyAction
-              options:
-                  srcDir: "./src/ts"
-                  destDir: "./dist/ts"
 
             # Copy fonts
             # -----------------------------------------------------------------
@@ -142,12 +100,30 @@ stages:
                       - contributors
                       - repository
                       - funding
-                      - main
-                      - module
-                      - style
-                      - sass
-                      - exports
-                      - files
+                  # dist/ is the package root: paths below are relative to it
+                  # and override the repo-relative ones in ./package.json.
+                  customConfig:
+                      main: "scss/index.scss"
+                      style: "css/font.gl.css"
+                      sass: "scss/index.scss"
+                      types: null
+                      exports:
+                          ".":
+                              sass: "./scss/index.scss"
+                              style: "./css/font.gl.css"
+                              default: "./css/font.gl.css"
+                          "./scss": "./scss/index.scss"
+                          "./scss/*": "./scss/*"
+                          "./css/*": "./css/*"
+                          "./font/*": "./font/*"
+                          "./package.json": "./package.json"
+                      files:
+                          - "css/**/*.css"
+                          - "scss/**/*.scss"
+                          - "font/**/*.{ttf,woff2}"
+                          - "font/**/OFL.txt"
+                          - "LICENSE"
+                          - "README.md"
 
             # Version synchronization
             # -----------------------------------------------------------------

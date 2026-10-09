@@ -1,0 +1,57 @@
+{
+  "name": "font.gl",
+  "version": "0.0.13",
+  "description": "font.gl is a curated collection of open-source variable fonts with a Sass/CSS integration, by Scape Press.",
+  "keywords": [
+    "font",
+    "fonts",
+    "variable-fonts",
+    "webfont",
+    "woff2",
+    "font-face",
+    "font.gl",
+    "sass",
+    "scss",
+    "css"
+  ],
+  "license": "MIT",
+  "homepage": "https://www.font.gl/",
+  "main": "scss/index.scss",
+  "types": null,
+  "files": [
+    "css/**/*.css",
+    "scss/**/*.scss",
+    "font/**/*.{ttf,woff2}",
+    "font/**/OFL.txt",
+    "LICENSE",
+    "README.md"
+  ],
+  "author": "Lars van Vianen",
+  "contributors": [
+    "Scape Press"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/stylescape/font.gl.git"
+  },
+  "funding": [
+    {
+      "type": "github",
+      "url": "https://github.com/sponsors/scape-foundation"
+    }
+  ],
+  "style": "css/font.gl.css",
+  "sass": "scss/index.scss",
+  "exports": {
+    ".": {
+      "sass": "./scss/index.scss",
+      "style": "./css/font.gl.css",
+      "default": "./css/font.gl.css"
+    },
+    "./scss": "./scss/index.scss",
+    "./scss/*": "./scss/*",
+    "./css/*": "./css/*",
+    "./font/*": "./font/*",
+    "./package.json": "./package.json"
+  }
+}

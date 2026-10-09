@@ -1,0 +1,43 @@
+// ============================================================================
+// font.gl | Font Registry
+// ============================================================================
+// One entry per bundled variable font. Keys double as directory names under
+// `src/font/` and as class / custom-property suffixes.
+//
+//   family    CSS family name used in `@font-face`
+//   file      file name without extension (inside `<key>/`)
+//   fallback  stack appended after the family
+//   weight    `font-weight` range declared in `@font-face`
+//   axes      custom axes driven through `font-variation-settings`
+//             (only for fonts whose `wght` axis is not on the CSS scale)
+// ============================================================================
+
+/// Registry of bundled fonts. Override to ship a subset.
+/// @type Map
+$fonts: (
+    "manrope": (
+        family: "Manrope",
+        file: "manrope-variable",
+        fallback: (ui-sans-serif, system-ui, sans-serif),
+        weight: 200 800,
+    ),
+    "quicksand": (
+        family: "Quicksand",
+        file: "quicksand-variable",
+        fallback: (ui-rounded, ui-sans-serif, system-ui, sans-serif),
+        weight: 300 700,
+    ),
+    // Alvarado's `wght` axis runs 0–100 (Light 0, Regular 25, Medium 50,
+    // Bold 100) and its `ital` axis 0–100, so `font-weight` / `font-style`
+    // cannot reach them. They are driven through custom properties instead.
+    "alvarado": (
+        family: "Alvarado",
+        file: "alvarado-variable",
+        fallback: (ui-serif, "Georgia", serif),
+        weight: 1 100,
+        axes: (
+            "wght": 25,
+            "ital": 0,
+        ),
+    ),
+) !default;
