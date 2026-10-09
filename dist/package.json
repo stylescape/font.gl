@@ -1,6 +1,6 @@
 {
   "name": "font.gl",
-  "version": "0.0.13",
+  "version": "0.1.0",
   "description": "font.gl is a curated collection of open-source variable fonts with a Sass/CSS integration, by Scape Press.",
   "keywords": [
     "font",
@@ -17,9 +17,10 @@
   "license": "MIT",
   "homepage": "https://www.font.gl/",
   "main": "scss/index.scss",
-  "types": null,
+  "types": "js/index.d.ts",
   "files": [
     "css/**/*.css",
+    "js/**/*.{js,d.ts}",
     "scss/**/*.scss",
     "font/**/*.{ttf,woff2}",
     "font/**/OFL.txt",
@@ -42,11 +43,15 @@
   ],
   "style": "css/font.gl.css",
   "sass": "scss/index.scss",
+  "type": "module",
+  "module": "js/index.js",
   "exports": {
     ".": {
+      "types": "./js/index.d.ts",
       "sass": "./scss/index.scss",
       "style": "./css/font.gl.css",
-      "default": "./css/font.gl.css"
+      "import": "./js/index.js",
+      "default": "./js/index.js"
     },
     "./scss": "./scss/index.scss",
     "./scss/*": "./scss/*",

@@ -4,36 +4,25 @@ This project exists thanks to all the people who contribute.
 
 ## Core Contributors
 
-### Your Name
+### Lars Bastiaan van Vianen
 
 Role: Project Lead, Main Developer  
-Email: yourname@email.com  
-Github: @yourgithubhandle  
-Contribution: Initial idea, architecture design, code development and project management
+Email: lars@scape.press  
+Organisation: [Scape Press](https://www.scape.press)  
+Contribution: Initial idea, Sass/CSS integration, font tester, packaging and project management
 
-## Other Contributors
+## Font Designers
 
-### Contributor's Name
+font.gl bundles fonts by other designers. Each font keeps its own license (SIL Open Font License 1.1), shipped as `OFL.txt` next to the font files.
 
-Role: Developer  
-Email: contributorname@email.com  
-Github: @contributorgithubhandle  
-Contribution: Code development, testing, and debugging
+- **Manrope**: Mikhail Sharanda ([github.com/sharanda/manrope](https://github.com/sharanda/manrope))
+- **Quicksand**: Andrew Paglinawan ([github.com/andrew-paglinawan/QuicksandFamily](https://github.com/andrew-paglinawan/QuicksandFamily))
+- **Alvarado**: Hector Torres, published by [Primary Foundry](https://primary-foundry.com/typefaces/alvarado/)
 
 ## Acknowledgements
 
 This project also exists thanks to all the people who contribute indirectly, such as bug reporters, testers, and users providing feedback.
 
-### Bug Reporters
-
-- Reporter Name (@reportergithubhandle)
-- Reporter Name (@reportergithubhandle)
-
-### Feedback and Suggestions
-
-- Name (@githubhandle)
-- Name (@githubhandle)
-
 ## Contribution
 
-We welcome contributions from the community. Please read our [Contribution Guidelines](LINK_TO_CONTRIBUTION_GUIDELINES.md) before making a contribution.
+We welcome contributions from the community. Please read our [Contribution Guidelines](.github/CONTRIBUTING.md) before making a contribution.

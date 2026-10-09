@@ -93,6 +93,21 @@ body {
 
 `pkg:` URLs need Dart Sass with the Node package importer (`--pkg-importer=node`, or `importers: [new NodePackageImporter()]`).
 
+### JavaScript
+
+The package also exports a typed catalogue of the bundled fonts, for build tools, font pickers or preloading:
+
+``` ts
+import { fonts, fontKeys, fontStack, type FontKey } from "font.gl";
+
+fonts.manrope.weight;        // [200, 800]
+fonts.alvarado.axes;         // [{ tag: "wght", min: 0, default: 0, max: 100 }, ...]
+fonts.quicksand.files.woff2; // "font/quicksand/quicksand-variable.woff2"
+fontStack("manrope");        // '"Manrope", ui-sans-serif, system-ui, sans-serif'
+```
+
+File paths are relative to the package root (`font.gl/font/...`).
+
 ### Alvarado
 
 Alvarado's axes don't follow the CSS scales (`wght` runs 0–100: Light 0, Regular 25, Medium 50, Bold 100), so `font-weight` and `font-style` can't reach them. `.font-alvarado` and `@include font.font("alvarado")` drive the axes through custom properties instead:
@@ -107,7 +122,10 @@ Alvarado's axes don't follow the CSS scales (`wght` runs 0–100: Light 0, Regul
 ## Development
 
 ``` bash
-npm run build      # kist: CSS, Sass, fonts and dist/package.json into dist/
+npm run build      # kist: CSS, JS, Sass, fonts and dist/package.json into dist/
+npm run lint       # ESLint (src/ts) and stylelint (src/scss)
+npm run typecheck
+npm test           # Sass output and font catalogue tests
 ```
 
 `dist/` is the published package root. Open `dist/html/index.html` after a build for an interactive font tester.
@@ -138,7 +156,7 @@ Please refer to the [contribution guidelines](.github/CONTRIBUTING.md) for infor
 
 #### Copyright
 
-Copyright &copy; 2025 [Scape Press BV](https://www.scape.press/ "Scape Press website"). All Rights Reserved.
+Copyright &copy; 2024 [Scape Press BV](https://www.scape.press/ "Scape Press website").
 
 #### License
 

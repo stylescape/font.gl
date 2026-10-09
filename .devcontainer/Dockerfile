@@ -7,14 +7,8 @@
 FROM ghcr.io/stylescape/stylescape-devcontainer/devcontainer:latest
 
 
-# Copy package.json and package-lock.json
-COPY package*.json ./
-
-# Install any needed packages
-RUN npm install
-
-# Bundle your app's source code inside the Docker image
-COPY . .
+# The project is bind-mounted at /workspace and `postCreateCommand` runs
+# `npm install`, so the image copies no project files.
 
 # Make port available to the world outside this container
 EXPOSE 3000

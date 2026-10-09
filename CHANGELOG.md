@@ -1,6 +1,6 @@
 # Changelog
 
-## Unreleased
+## 0.1.0
 
 ### Fixed
 
@@ -16,6 +16,7 @@
 - Docs site: invalid top-level `lang` key failed `mkdocs build --strict`; logo path pointed to a non-existent file; edit links missed the `edit/<branch>/` prefix.
 - Linting silently did nothing: ESLint 10 ignores `.eslintrc`, and `|| true` masked the failure.
 - Dev container set both `image` and `build`, used Node 18, and ran `pip3 install -r requirements.txt` against a missing file.
+- Dev container build: the `Dockerfile` copied and installed `package.json` from the `.devcontainer/` build context, which has none; `remoteUser` named `vscode`, which the base image lacks (it is `nodeuser`).
 - VS Code launch configs started a non-existent `index.js` and `npm start`.
 - README license section claimed CC BY 4.0 / Apache 2.0, contradicting the MIT `LICENSE`; it now separates the MIT code license from the per-font licenses.
 - CodeQL only ran for `main`, not the default branch `dev`.
@@ -31,11 +32,16 @@
 - ESLint flat config (`eslint.config.js`) and stylelint for the Sass sources; `npm run lint` now runs both and gates the publish workflow.
 - `npm run typecheck`, which the agent instructions already referenced.
 - `npm test`: Sass tests (`test/scss.test.mjs`, Node's built-in test runner) for the generated `@font-face` rules, custom properties and utilities, the `$font-path` / `$font-formats` / `$font-display` / `$fonts` / emit settings, and the unknown-font and font-smoothing errors. The publish workflow already runs `npm run test --if-present`.
+- Typed JavaScript font catalogue (`import { fonts, fontKeys, fontStack } from "font.gl"`): keys, families, axes, weight ranges, fallback stacks and file paths, compiled to `js/` with declarations. `tst/catalogue.test.mjs` keeps it in sync with the Sass registry.
+- Glossary page.
 - Specifications page: bundled fonts, package layout, Sass settings and API.
 - `.gitattributes` marks font files as binary.
 - `OFL.txt` for Manrope, Quicksand and Alvarado (required by the OFL; Alvarado's is the foundry's file verbatim), shipped in the package next to the fonts.
 
 ### Changed
+
+- Copyright notices now read "2024 Scape Press BV" everywhere; the README and docs footer drop "All Rights Reserved", which contradicted the MIT license.
+- `AUTHORS` and `CONTRIBITORS.md` list the actual maintainer and the font designers instead of placeholders.
 
 - Renamed `AlvaradoVar.ttf` to `alvarado-variable.ttf`.
 - Removed unused webpack/Babel toolchain and committed TypeScript build output.

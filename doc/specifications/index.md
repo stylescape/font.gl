@@ -16,6 +16,7 @@ Each font ships as `font/<key>/<key>-variable.woff2` and `.ttf`.
 | --------------------- | ------------------------------------------------------------ |
 | `css/font.gl.css`     | `@font-face` rules, `--font-*` properties, `.font-*` classes |
 | `css/font.gl.min.css` | Same, minified                                               |
+| `js/index.js`         | Font catalogue (ESM), with `js/index.d.ts` types             |
 | `scss/index.scss`     | Configurable stylesheet (emits the CSS above)                |
 | `scss/font.scss`      | Settings, functions and mixins only (emits nothing)          |
 | `font/`               | Font files                                                   |
@@ -43,6 +44,17 @@ All settings are `!default` and can be set with `@use "pkg:font.gl" with (...)`.
 | `font-faces($path)`            | mixin    | `@font-face` rules for every registered font                    |
 | `font($key)`                   | mixin    | `font-family`, plus `font-variation-settings` for custom axes   |
 | `font-smoothing($type)`        | mixin    | `antialiased` (default), `subpixel-antialiased`, `auto`, `none` |
+
+## JavaScript API
+
+`import { ... } from "font.gl"` (ESM, typed). Mirrors the Sass registry; file paths are relative to the package root.
+
+| Member           | Kind     | Description                                                                 |
+| ---------------- | -------- | --------------------------------------------------------------------------- |
+| `fonts`          | object   | Catalogue by key: family, classification, designer, license, fallback, weight, axes, files, license file |
+| `fontKeys`       | array    | Keys of `fonts`, in registry order                                          |
+| `fontStack(key)` | function | `font-family` value, identical to `--font-<key>`                            |
+| `Font`, `FontAxis`, `FontKey` | types | Shapes of a catalogue entry, an axis, and the key union             |
 
 ## Alvarado axes
 

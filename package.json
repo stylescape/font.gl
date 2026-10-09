@@ -1,7 +1,7 @@
 {
     "name": "font.gl",
     "description": "font.gl is a curated collection of open-source variable fonts with a Sass/CSS integration, by Scape Press.",
-    "version": "0.0.13",
+    "version": "0.1.0",
     "config": {
         "version_short": "0.0"
     },
@@ -42,6 +42,7 @@
     "sass": "src/scss/index.scss",
     "files": [
         "dist/css/**",
+        "dist/js/**",
         "dist/scss/**",
         "dist/font/**"
     ],
@@ -53,7 +54,7 @@
         "lint:ts": "eslint src/ts",
         "lint:scss": "stylelint \"src/scss/**/*.scss\"",
         "lint:scss:fix": "stylelint \"src/scss/**/*.scss\" --fix",
-        "test": "node --test tst/scss.test.mjs",
+        "test": "node --test tst/*.test.mjs",
         "typecheck": "tsc --noEmit"
     },
     "devDependencies": {

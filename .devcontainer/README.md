@@ -50,7 +50,7 @@ The development container is configured with the following settings:
         3000
     ],
     "postCreateCommand": "npm install",
-    "remoteUser": "vscode",
+    "remoteUser": "nodeuser",
     "workspaceFolder": "/workspace",
     "mounts": [
         "source=${localWorkspaceFolder},target=/workspace,type=bind,consistency=cached"

@@ -44,6 +44,13 @@ stages:
                   outputFile: "./dist/css/font.gl.css"
                   styleOption: "expanded"
 
+            # Compile the font catalogue (ESM + declarations)
+            # -----------------------------------------------------------------
+            - name: CompileTypeScript
+              action: TypeScriptCompilerAction
+              options:
+                  tsconfigPath: "./tsconfig.build.json"
+
             # Copy source files
             # -----------------------------------------------------------------
             - name: CopySrcSCSS
@@ -106,12 +113,16 @@ stages:
                       main: "scss/index.scss"
                       style: "css/font.gl.css"
                       sass: "scss/index.scss"
-                      types: null
+                      type: "module"
+                      module: "js/index.js"
+                      types: "js/index.d.ts"
                       exports:
                           ".":
+                              types: "./js/index.d.ts"
                               sass: "./scss/index.scss"
                               style: "./css/font.gl.css"
-                              default: "./css/font.gl.css"
+                              import: "./js/index.js"
+                              default: "./js/index.js"
                           "./scss": "./scss/index.scss"
                           "./scss/*": "./scss/*"
                           "./css/*": "./css/*"
@@ -119,6 +130,7 @@ stages:
                           "./package.json": "./package.json"
                       files:
                           - "css/**/*.css"
+                          - "js/**/*.{js,d.ts}"
                           - "scss/**/*.scss"
                           - "font/**/*.{ttf,woff2}"
                           - "font/**/OFL.txt"

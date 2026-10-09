@@ -9,44 +9,6 @@
 // File paths are relative to the package root, e.g.
 // `font.gl/font/manrope/manrope-variable.woff2`.
 // ============================================================================
-
-/** A variation axis as declared in the font's `fvar` table. */
-export interface FontAxis {
-    /** Four-letter axis tag, e.g. `wght`. */
-    readonly tag: string
-    readonly min: number
-    readonly default: number
-    readonly max: number
-}
-
-/** One bundled variable font. */
-export interface Font {
-    /** Registry key: directory name, `--font-<key>` and `.font-<key>` suffix. */
-    readonly key: string
-    /** CSS family name used in `@font-face`. */
-    readonly family: string
-    readonly classification: string
-    readonly designer: string
-    /** SPDX license identifier of the font files. */
-    readonly license: string
-    /** Stack appended after the family. */
-    readonly fallback: readonly string[]
-    /** `font-weight` range declared in `@font-face`. */
-    readonly weight: readonly [number, number]
-    /** Axes of the font file. */
-    readonly axes: readonly FontAxis[]
-    /**
-     * Axes driven through `font-variation-settings` and
-     * `--font-<key>-<tag>` custom properties, with their default values.
-     * Only set for fonts whose axes are not on the CSS scales.
-     */
-    readonly variationDefaults?: Readonly<Record<string, number>>
-    /** Font files by extension, relative to the package root. */
-    readonly files: { readonly woff2: string; readonly ttf: string }
-    /** License text, relative to the package root. */
-    readonly licenseFile: string
-}
-
 export const fonts = {
     manrope: {
         key: 'manrope',
@@ -100,20 +62,15 @@ export const fonts = {
         },
         licenseFile: 'font/alvarado/OFL.txt',
     },
-} as const satisfies Record<string, Font>
-
-export type FontKey = keyof typeof fonts
-
-export const fontKeys = Object.keys(fonts) as FontKey[]
-
+};
+export const fontKeys = Object.keys(fonts);
 // Generic families and `system-ui`-style keywords must stay unquoted.
-const isKeyword = (name: string): boolean => /^[a-z-]+$/.test(name)
-
+const isKeyword = (name) => /^[a-z-]+$/.test(name);
 /**
  * CSS `font-family` value for `key`, matching the Sass `font-stack()`
  * function and the `--font-<key>` custom property.
  */
-export function fontStack(key: FontKey): string {
-    const { family, fallback } = fonts[key] as Font
-    return [family, ...fallback].map((name) => (isKeyword(name) ? name : `"${name}"`)).join(', ')
+export function fontStack(key) {
+    const { family, fallback } = fonts[key];
+    return [family, ...fallback].map((name) => (isKeyword(name) ? name : `"${name}"`)).join(', ');
 }
