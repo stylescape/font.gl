@@ -53,6 +53,7 @@
         "lint:ts": "eslint src/ts",
         "lint:scss": "stylelint \"src/scss/**/*.scss\"",
         "lint:scss:fix": "stylelint \"src/scss/**/*.scss\" --fix",
+        "test": "node --test tst/scss.test.mjs",
         "typecheck": "tsc --noEmit"
     },
     "devDependencies": {
@@ -61,7 +62,7 @@
         "autoprefixer": "^10.6.1",
         "eslint": "^10.4.1",
         "eslint-config-prettier": "^10.1.8",
-        "kist": "^0.1.75",
+        "kist": "^0.1.81",
         "prettier": "^3.9.9",
         "sass": "^1.104.0",
         "stylelint": "^17.11.1",

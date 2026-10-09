@@ -157,5 +157,5 @@ The bundled fonts are **not** covered by the MIT License; each keeps its own lic
 ---
 
 <p align="center">
-    <b>Made with ❤️ by <a href="https://www.scape.press" target="_blank">Scape Press</a></b>
+    <b>Made by <a href="https://www.scape.press" target="_blank">Scape Press</a></b>
 </p>

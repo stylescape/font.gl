@@ -8,6 +8,8 @@
 - `src/scss/index.scss` imported ~15 Stylescape partials that don't exist, so it never compiled; CSS build steps were disabled as a result.
 - `font-smoothing` mixin emitted quoted values (invalid CSS) and an invalid `antialiased` value for `-moz-osx-font-smoothing`.
 - Font tester page called jQuery UI without loading it and showed Google Fonts instead of the bundled fonts.
+- Font tester: slider readouts failed WCAG contrast (2.6:1), and the sample text was clipped at large sizes; the sample now grows with its text.
+- Dev container README still described the Node 18 image and the `requirements.txt` install.
 - `npm run dev/serve/start/build:webpack` referenced a missing `webpack.config.js`.
 - Publish workflow used Node 18, below what the dev toolchain requires.
 - Docs workflow: unquoted `mkdocstrings[python]>=0.18` was parsed as a shell redirect, dropping the version constraint.
@@ -28,6 +30,7 @@
 - Alvarado axis control through `--font-alvarado-wght` / `--font-alvarado-ital`.
 - ESLint flat config (`eslint.config.js`) and stylelint for the Sass sources; `npm run lint` now runs both and gates the publish workflow.
 - `npm run typecheck`, which the agent instructions already referenced.
+- `npm test`: Sass tests (`test/scss.test.mjs`, Node's built-in test runner) for the generated `@font-face` rules, custom properties and utilities, the `$font-path` / `$font-formats` / `$font-display` / `$fonts` / emit settings, and the unknown-font and font-smoothing errors. The publish workflow already runs `npm run test --if-present`.
 - Specifications page: bundled fonts, package layout, Sass settings and API.
 - `.gitattributes` marks font files as binary.
 - `OFL.txt` for Manrope, Quicksand and Alvarado (required by the OFL; Alvarado's is the foundry's file verbatim), shipped in the package next to the fonts.

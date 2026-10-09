@@ -6,17 +6,16 @@ This repository provides a development container configuration for working on th
 
 The development container is configured with the following settings:
 
-```json
+```jsonc
 {
     "name": "Stylescape DevContainer",
     "build": {
         "dockerfile": "Dockerfile",
         "context": "."
     },
-    "image": "mcr.microsoft.com/vscode/devcontainers/javascript-node:0-18",
     "features": {
-        "ghcr.io/devcontainers/features/node:1": {
-            "version": "18"
+        "ghcr.io/devcontainers/features/node:2": {
+            "version": "22"
         }
     },
     "customizations": {
@@ -47,11 +46,15 @@ The development container is configured with the following settings:
             }
         }
     },
-    "forwardPorts": [3000],
-    "postCreateCommand": "npm install && pip3 install -r requirements.txt",
+    "forwardPorts": [
+        3000
+    ],
+    "postCreateCommand": "npm install",
     "remoteUser": "vscode",
     "workspaceFolder": "/workspace",
-    "mounts": ["source=${localWorkspaceFolder},target=/workspace,type=bind,consistency=cached"],
+    "mounts": [
+        "source=${localWorkspaceFolder},target=/workspace,type=bind,consistency=cached"
+    ],
     "remoteEnv": {
         "NODE_ENV": "development"
     },
@@ -64,7 +67,7 @@ The development container is configured with the following settings:
 ### Key Components
 
 1. **Base Image**:
-    - **Node.js Dev Container**: The development environment is based on the official Node.js Dev Container image `mcr.microsoft.com/vscode/devcontainers/javascript-node:0-18`, which includes Node.js 18, ensuring consistency across development environments.
+    - **Stylescape Dev Container**: The `Dockerfile` builds on `ghcr.io/stylescape/stylescape-devcontainer/devcontainer:latest`; the Dev Containers `node` feature pins Node.js 22, which the toolchain (ESLint 10, TypeScript 6, stylelint 17) requires.
 
 2. **VS Code Extensions**:
    The container is pre-configured with a comprehensive set of Visual Studio Code extensions to enhance your development experience:
@@ -88,7 +91,7 @@ The development container is configured with the following settings:
         - `octref.vetur`: Support for Vue.js development.
 
 3. **Post-Creation Commands**:
-    - Automatically installs Node.js and Python dependencies using `npm install` and `pip3 install -r requirements.txt` after the container is created, ensuring your development environment is ready to go.
+    - Runs `npm install` after the container is created. The project has no Python dependencies.
 
 4. **Environment Variables**:
     - The `NODE_ENV` is set to `development` for both the remote and container environments, ensuring your application runs in development mode.

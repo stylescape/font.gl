@@ -112,7 +112,7 @@ Before reporting work complete:
 ## Stack — Node / TypeScript library
 
 - Maintain the `package.json` `exports` map and emit type declarations.
-- Run `npm run typecheck` / `npm run lint` / `npm run build` (whichever exist)
+- Run `npm run typecheck` / `npm run lint` / `npm test` / `npm run build` (whichever exist)
   before declaring done.
 - Keep the dependency footprint small; prefer existing utilities.
 

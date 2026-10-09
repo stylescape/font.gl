@@ -20,9 +20,18 @@
                 margin-block-end: var(--ss-spacing-6);
             }
 
+            /* stylescape 0.4 greys .ss-c-form__help to #a0a0a0 (2.6:1 on
+               white); slider readouts need full contrast. */
+            .controls output {
+                color: inherit;
+            }
+
             #sample {
                 width: 100%;
                 min-height: 2em;
+                /* Grow with the text so large sizes are not clipped. */
+                field-sizing: content;
+                resize: vertical;
                 padding-block: var(--ss-spacing-4);
                 border: 0;
                 border-block: 1px solid var(--ss-color-line);
