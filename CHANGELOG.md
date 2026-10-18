@@ -22,6 +22,7 @@
 - CodeQL only ran for `main`, not the default branch `dev`.
 - Docs license page named another project ("rite") and copyright holder; it now matches `LICENSE` and states that fonts keep their own licenses.
 - `tsconfig.json` failed under TypeScript 6 (deprecated `downlevelIteration`).
+- `dist/package.json` carried `"types": null`; `kist.yml` now sets `types` to the JS declarations (`js/index.d.ts`), with kist 0.1.81, whose `PackageManagerAction` drops a key set to `null`.
 
 ### Added
 
