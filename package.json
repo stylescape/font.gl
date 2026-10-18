@@ -70,6 +70,6 @@
         "stylelint-config-standard-scss": "^17.0.0",
         "stylescape": "^0.4.1",
         "typescript": "^6.0.3",
-        "typescript-eslint": "^8.71.1"
+        "typescript-eslint": "^8.71.2"
     }
 }
