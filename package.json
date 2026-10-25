@@ -65,7 +65,7 @@
         "eslint-config-prettier": "^10.1.8",
         "kist": "^0.1.81",
         "prettier": "^3.9.10",
-        "sass": "^1.105.1",
+        "sass": "^1.106.1",
         "stylelint": "^17.11.1",
         "stylelint-config-standard-scss": "^17.0.0",
         "stylescape": "^0.4.1",
