@@ -8,8 +8,7 @@
 
 <div align="center">
 
-[![Website](https://img.shields.io/website?url=https%3A%2F%2Fwww.font.gl&up_message=Up&up_color=%23000000&down_message=Down&down_color=%23000000&style=flat-square&logo=Firefox&logoColor=FFFFFF&label=Website&labelColor=%23000000&color=%23000000)
-](https://www.font.gl)
+[![Website](https://img.shields.io/website?url=https%3A%2F%2Fwww.font.gl&up_message=Up&up_color=%23000000&down_message=Down&down_color=%23000000&style=flat-square&logo=Firefox&logoColor=FFFFFF&label=Website&labelColor=%23000000&color=%23000000)](https://www.font.gl)
 [![NPM Version](https://img.shields.io/npm/v/font.gl?style=flat-square&logo=npm&logoColor=FFFFFF&label=NPM&labelColor=%23000000&color=%23000000&link=https%3A%2F%2Fwww.npmjs.com%2Fpackage%2Ffont.gl)](https://www.npmjs.com/package/font.gl)
 [![devContainer](https://img.shields.io/badge/devContainer-23354351?style=flat-square&logo=Docker&logoColor=%23FFFFFF&labelColor=%23000000&color=%23000000)](https://vscode.dev/redirect?url=vscode://ms-vscode-remote.remote-containers/cloneInVolume?url=https://github.com/stylescape/font.gl)
 [![StackBlitz](https://img.shields.io/badge/StackBlitz-23354351?style=flat-square&logo=StackBlitz&logoColor=%23FFFFFF&labelColor=%23000000&color=%23000000)](https://stackblitz.com/github/stylescape/font.gl/tree/main?file=src%2Findex.html)
@@ -31,7 +30,7 @@
 
 <br/>
 
-**Curated Open-Source Variable Font Library by Scape Press**
+Curated Open-Source Variable Font Library by Scape Press
 
 ## Overview
 
@@ -39,11 +38,11 @@
 
 ## Fonts
 
-| Key         | Family    | Classification | Weight axis               | Designer          | License                                              |
-| ----------- | --------- | -------------- | ------------------------- | ----------------- | ---------------------------------------------------- |
-| `manrope`   | Manrope   | Sans-serif     | `wght` 200–800            | Mikhail Sharanda  | [SIL OFL 1.1](src/font/manrope/OFL.txt)              |
-| `quicksand` | Quicksand | Rounded sans   | `wght` 300–700            | Andrew Paglinawan | [SIL OFL 1.1](src/font/quicksand/OFL.txt)            |
-| `alvarado`  | Alvarado  | Serif          | `wght` 0–100, `ital` 0–100 | Hector Torres     | [SIL OFL 1.1](src/font/alvarado/OFL.txt)             |
+| Key | Family | Classification | Weight axis | Designer | License |
+| --- | --- | --- | --- | --- | --- |
+| `manrope` | Manrope | Sans-serif | `wght` 200–800 | Mikhail Sharanda | [SIL OFL 1.1](src/font/manrope/OFL.txt) |
+| `quicksand` | Quicksand | Rounded sans | `wght` 300–700 | Andrew Paglinawan | [SIL OFL 1.1](src/font/quicksand/OFL.txt) |
+| `alvarado` | Alvarado | Serif | `wght` 0–100, `ital` 0–100 | Hector Torres | [SIL OFL 1.1](src/font/alvarado/OFL.txt) |
 
 ## Installation
 

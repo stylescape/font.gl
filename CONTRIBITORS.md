@@ -7,7 +7,7 @@ This project exists thanks to all the people who contribute.
 ### Lars Bastiaan van Vianen
 
 Role: Project Lead, Main Developer  
-Email: lars@scape.press  
+Email: <lars@scape.press>  
 Organisation: [Scape Press](https://www.scape.press)  
 Contribution: Initial idea, Sass/CSS integration, font tester, packaging and project management
 

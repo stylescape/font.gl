@@ -49,12 +49,12 @@ All settings are `!default` and can be set with `@use "pkg:font.gl" with (...)`.
 
 `import { ... } from "font.gl"` (ESM, typed). Mirrors the Sass registry; file paths are relative to the package root.
 
-| Member           | Kind     | Description                                                                 |
-| ---------------- | -------- | --------------------------------------------------------------------------- |
-| `fonts`          | object   | Catalogue by key: family, classification, designer, license, fallback, weight, axes, files, license file |
-| `fontKeys`       | array    | Keys of `fonts`, in registry order                                          |
-| `fontStack(key)` | function | `font-family` value, identical to `--font-<key>`                            |
-| `Font`, `FontAxis`, `FontKey` | types | Shapes of a catalogue entry, an axis, and the key union             |
+| Member | Kind | Description |
+| --- | --- | --- |
+| `fonts` | object | Catalogue by key: family, classification, designer, license, fallback, weight, axes, files, license file |
+| `fontKeys` | array | Keys of `fonts`, in registry order |
+| `fontStack(key)` | function | `font-family` value, identical to `--font-<key>` |
+| `Font`, `FontAxis`, `FontKey` | types | Shapes of a catalogue entry, an axis, and the key union |
 
 ## Alvarado axes
 
