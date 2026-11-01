@@ -68,7 +68,7 @@
         "sass": "^1.106.1",
         "stylelint": "^17.11.1",
         "stylelint-config-standard-scss": "^17.0.0",
-        "stylescape": "^0.4.1",
+        "stylescape": "^0.5.5",
         "typescript": "^6.0.3",
         "typescript-eslint": "^8.72.0"
     }
